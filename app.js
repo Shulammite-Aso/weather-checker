@@ -14,7 +14,7 @@ app.post('/', function(req, res) {
     var place = req.body.place;
 
     http.get(`http://api.openweathermap.org/data/2.5/weather?q=${place}&appid=243d420b9914f83c022b02c82083d1f2`, (response) => {
-        console.log(response.statusCode);
+       // console.log(response.statusCode);
 
        response.on('data', function(data) {
            const weatherData = JSON.parse(data);
